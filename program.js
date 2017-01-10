@@ -3,6 +3,10 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.self = undefined;
+
+var _storeRTDE = require('./storeRTDE');
+
 var self = exports.self = {
   state: {
     inputs: {},
@@ -11,7 +15,7 @@ var self = exports.self = {
   recipe: {
     0: {
       perform: function perform(callback) {
-        var currState = getRobotState();
+        var currState = (0, _storeRTDE.getRobotState)();
         self.state.inputs = currState.inputs;
         self.state.outputs = currState.outputs;
         console.log(self.state);
@@ -25,8 +29,8 @@ var self = exports.self = {
     },
     2: {
       perform: function perform(callback) {
-        console.log(getStandardDigitalOutput(0));
-        if (getStandardDigitalOutput(0) == '1') {
+        console.log((0, _storeRTDE.getStandardDigitalOutput)(0));
+        if ((0, _storeRTDE.getStandardDigitalOutput)(0) == '1') {
           self.recipe[2].nextStep = 0;
         } else {
           self.recipe[2].nextStep = 3;

@@ -1,4 +1,11 @@
 'use strict'
+import {
+  getRobotState,
+  getStandardDigitalOutput,
+  getStandardDigitalInput,
+} from './storeRTDE'
+
+
 export const self = {
     state:{
       inputs:{},
