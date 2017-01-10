@@ -1,6 +1,9 @@
 'use strict';
 
-var self = {
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var self = exports.self = {
   state: {
     inputs: {},
     outputs: {}

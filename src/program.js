@@ -1,4 +1,5 @@
-let self = {
+'use strict'
+export const self = {
     state:{
       inputs:{},
       outputs:{},
