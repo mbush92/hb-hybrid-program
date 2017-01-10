@@ -12,9 +12,9 @@ var self = exports.self = {
     0: {
       perform: function perform(state, callback) {
         var currState = state;
-        self.state.inputs = currState.inputs;
-        self.state.outputs = currState.outputs;
-        console.log(self.state);
+        this.state.inputs = currState.inputs;
+        this.state.outputs = currState.outputs;
+        console.log(this.state);
         console.log('****************************************************')
         console.log('ROB DOESNT BELIEVE ME!!!!!')
         return callback(null, 3);
@@ -28,10 +28,10 @@ var self = exports.self = {
       perform: function perform(state, callback) {
         var outputs = state.outputs.standardOutputs;
         if (outputs[0] == '1') {
-          self.recipe[2].nextStep = 0;
+          this.recipe[2].nextStep = 0;
           return callback(null, 0);
         } else {
-          self.recipe[2].nextStep = 1;
+          this.recipe[2].nextStep = 1;
           return callback(null, 1);
         }
       },
