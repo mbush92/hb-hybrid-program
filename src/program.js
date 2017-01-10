@@ -1,6 +1,6 @@
 'use strict'
 
-export const self = {
+var self = {
     state:{
       inputs:{},
       outputs:{},
@@ -38,3 +38,5 @@ export const self = {
       },
     },
   }
+
+  module.exports = {...self}
