@@ -7,15 +7,16 @@ export const self = {
     },
     recipe:{
       0: {
-        perform: (state, callback)=>{
+        perform: function (state, callback){
           let currState = state
-          self.state.inputs = currState.inputs
+          this.state.inputs = currState.inputs
           self.state.outputs = currState.outputs
           console.log(self.state)
-          return callback(null)
+          return callback(null, 1)
         },
-        nextStep:1,
-
+        props:{
+          nextStep:1,
+        }
       },
       1: {
         nextStep:2
@@ -25,10 +26,12 @@ export const self = {
           let outputs = state.outputs.standardOutputs
           if(outputs[0] == '1') {
               self.recipe[2].nextStep = 0
+              return callback(null, 0)
             } else {
               self.recipe[2].nextStep = 3
+              return callback(null, 3)
             }
-            return callback(null)
+            
         },
         nextStep:3
       },
