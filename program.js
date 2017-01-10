@@ -12,14 +12,12 @@ var self = exports.self = {
     0: {
       perform: function perform(state, callback) {
         var currState = state;
-        this.state.inputs = currState.inputs;
+        self.state.inputs = currState.inputs;
         self.state.outputs = currState.outputs;
         console.log(self.state);
         return callback(null, 1);
       },
-      props: {
-        nextStep: 1
-      }
+      nextStep: 1
     },
     1: {
       nextStep: 2

@@ -9,14 +9,12 @@ export const self = {
       0: {
         perform: function (state, callback){
           let currState = state
-          this.state.inputs = currState.inputs
+          self.state.inputs = currState.inputs
           self.state.outputs = currState.outputs
           console.log(self.state)
           return callback(null, 1)
         },
-        props:{
-          nextStep:1,
-        }
+        nextStep:1,
       },
       1: {
         nextStep:2
@@ -31,7 +29,7 @@ export const self = {
               self.recipe[2].nextStep = 3
               return callback(null, 3)
             }
-            
+
         },
         nextStep:3
       },
