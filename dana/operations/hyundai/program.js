@@ -16,7 +16,7 @@ var self = exports.self = {
         self.state.outputs = currState.outputs;
         console.log(self.state);
         console.log('****************************************************')
-        console.log('I JUST MADE THIS CHANGE AND PUSHED TO GITHUB!!!!!!')
+        console.log('ROB DOESNT BELIEVE ME!!!!!')
         return callback(null, 3);
       },
       nextStep: 3
