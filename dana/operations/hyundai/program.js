@@ -7,7 +7,7 @@ var op2 = function perform(state, callback) {
   self.state.inputs = currState.inputs;
   self.state.outputs = currState.outputs;
   console.log(self.state);
-  return callback(null, 3);
+  return callback(null, 1);
 }
 
 var op1 = function perform(state, callback) {
@@ -16,8 +16,8 @@ var op1 = function perform(state, callback) {
     self.recipe[2].nextStep = 0;
     return callback(null, 0);
   } else {
-    self.recipe[2].nextStep = 1;
-    return callback(null, 1);
+    self.recipe[2].nextStep = 3;
+    return callback(null, 3);
   }
 }
 
