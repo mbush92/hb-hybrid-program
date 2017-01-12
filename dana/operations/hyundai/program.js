@@ -4,17 +4,14 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var op2 = function perform(state, callback) {
   var currState = state;
-  self.state.inputs = currState.inputs;
-  self.state.outputs = currState.outputs;
-  console.log(self.state);
   return callback(null, 1);
 }
 
 var op1 = function perform(state, callback) {
   var outputs = state.outputs.standardOutputs;
   if (outputs[0] == '1') {
-    self.recipe[2].nextStep = 0;
-    return callback(null, 0);
+    self.recipe[2].nextStep = 1;
+    return callback(null, 1);
   } else {
     self.recipe[2].nextStep = 3;
     return callback(null, 3);
