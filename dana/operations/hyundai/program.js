@@ -26,7 +26,7 @@ var self = {
   recipe: {
     0: {
       perform: op1,
-      nextStep: 1
+      nextStep: 3
     },
     1: {
       nextStep: 2
