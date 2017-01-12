@@ -13,7 +13,6 @@ var self = {
         var currState = state;
         self.state.inputs = currState.inputs;
         self.state.outputs = currState.outputs;
-        console.log(self.state);
         return callback(null, 1);
       },
       nextStep: 1
