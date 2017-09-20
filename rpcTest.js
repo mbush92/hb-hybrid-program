@@ -8,6 +8,12 @@ var self = {
         ip = _ref.ip;
 
     return popupError(ip, 'Hey this worked');
+  },
+  concatNoSpace: function concatNoSpace(_ref2, callback) {
+    var popupError = _ref2.popupError,
+        ip = _ref2.ip;
+
+    return popupError(ip, 'I overwrote the base functionality with this new function');
   }
 };
 
