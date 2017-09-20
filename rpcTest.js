@@ -23,7 +23,7 @@ var self = {
         returnValue += value;
       }
     });
-    callback(null, returnValue);
+    //callback(null, returnValue);
     return popupError(ip, 'I extended the base functionality with this new function, had to have the original code and added to it in the new function...not a real extension');
   }
 };
