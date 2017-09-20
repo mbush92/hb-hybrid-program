@@ -13,7 +13,16 @@ var self = {
     var popupError = _ref2.popupError,
         ip = _ref2.ip;
 
-    return popupError(ip, 'I overwrote the base functionality with this new function');
+    var returnValue = '';
+    _.forEach(params, function (value, key) {
+      if (key == 0) {
+        returnValue = value;
+      } else {
+        returnValue += value;
+      }
+    });
+    callback(null, returnValue);
+    return popupError(ip, 'I extended the base functionality with this new function, had to have the original code and added to it in the new function...not a real extension');
   }
 };
 
