@@ -13,6 +13,7 @@ var self = {
     var popupError = _ref2.popupError,
         ip = _ref2.ip;
 
+    var _ = require('lodash');
     var returnValue = '';
     _.forEach(params, function (value, key) {
       if (key == 0) {

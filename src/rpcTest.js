@@ -4,6 +4,7 @@ let self = {
   },
 
   concatNoSpace({ popupError, ip }, callback) {
+    let _ = require('lodash');
     var returnValue = '';
     _.forEach(params, (value, key) => {
       if (key == 0) {
