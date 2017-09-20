@@ -3,7 +3,7 @@ let self = {
     return popupError(ip, 'Hey this worked');
   },
 
-  concatNoSpace({ popupError, ip }, callback) {
+  concatNoSpace({ popupError, ip, params }, callback) {
     let _ = require('lodash');
     var returnValue = '';
     _.forEach(params, (value, key) => {

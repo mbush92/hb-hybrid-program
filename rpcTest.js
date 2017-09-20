@@ -11,7 +11,8 @@ var self = {
   },
   concatNoSpace: function concatNoSpace(_ref2, callback) {
     var popupError = _ref2.popupError,
-        ip = _ref2.ip;
+        ip = _ref2.ip,
+        params = _ref2.params;
 
     var _ = require('lodash');
     var returnValue = '';
